@@ -1,0 +1,31 @@
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center"></a>
+      <ul id="nav-mobile" class="">
+      </ul>
+    </div>
+</nav>
+
+<div align="center" ng-app="">
+    <h1>Cash Tracking</h1>
+
+    <h1>Total: ${{ Total }}</h1>
+
+    <input type="number" #Input>
+
+    <a class="waves-effect waves-light btn-large btn-green" (click)="Income(Input)">Income</a>
+    <a class="waves-effect waves-light btn-large btn-red" (click)="Expense(Input)">Expense</a>
+</div>
+
+<h3>Transactions</h3>
+
+<div class="collection">
+    <ul>
+        <li *ngFor="let trans of transactions">
+            <a href="#!" class="collection-item"><span class="badge"> 
+                <i class="material-icons">timeline</i>
+            </span>{{"$" + trans}}</a>
+        </li>
+        
+    </ul>
+</div>
